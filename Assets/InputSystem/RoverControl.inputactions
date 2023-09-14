@@ -1,0 +1,34 @@
+{
+    "name": "RoverControl",
+    "maps": [
+        {
+            "name": "RoverBaseControl",
+            "id": "ad8cd68f-b748-4a7c-b4d5-9d9f622cb952",
+            "actions": [
+                {
+                    "name": "MoveForward",
+                    "type": "Button",
+                    "id": "e53a2924-e965-4e19-a235-54a860d30ff1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5667319d-12f2-4d20-9f49-2c54dac372eb",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveForward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
