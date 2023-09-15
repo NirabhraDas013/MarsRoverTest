@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.InputSystem;
 using EnhancedTouch = UnityEngine.InputSystem.EnhancedTouch;
 
 public class GameController : MonoBehaviour
@@ -19,7 +20,7 @@ public class GameController : MonoBehaviour
     [SerializeField]private ARRaycastManager arRaycastManager;
     [SerializeField]private ARPlaneManager arPlaneManager;
 
-    [SerializeField] private bool isReady = false;
+    [SerializeField] private bool isReady = true;
     private bool isRoverActive = false;
     private List<ARRaycastHit> arRaycastHits = new List<ARRaycastHit>();
 
@@ -45,14 +46,16 @@ public class GameController : MonoBehaviour
         EnhancedTouch.TouchSimulation.Enable();
         EnhancedTouch.EnhancedTouchSupport.Enable();
         EnhancedTouch.Touch.onFingerDown += FingerDown;
+
+        //PlayerInput.SwitchCurrentControlScheme(InputSystem.devices.First(d => d == Touchscreen.current));
     }
 
     private void OnDisable()
     {
         GameEventsManager.instance.InputEvents.OnSwitchPlayMode -= SwitchPlayMode;
 
-        EnhancedTouch.TouchSimulation.Enable();
-        EnhancedTouch.EnhancedTouchSupport.Enable();
+        EnhancedTouch.TouchSimulation.Disable();
+        EnhancedTouch.EnhancedTouchSupport.Disable();
         EnhancedTouch.Touch.onFingerDown -= FingerDown;
     }
 
@@ -61,31 +64,29 @@ public class GameController : MonoBehaviour
         Debug.Log($"Tapped at {finger.currentTouch.screenPosition} with {finger.index} finger");
         if (!isRoverActive)
         {
-            if (isReady)
+            if (finger.index != 0)
             {
-                if (finger.index != 0)
-                {
-                    return;
-                }
+                Debug.Log("Only single touch is allowed");
+                return;
+            }
 
-                if (arRaycastManager.Raycast(finger.currentTouch.screenPosition, arRaycastHits, TrackableType.PlaneWithinPolygon))
+            if (arRaycastManager.Raycast(finger.currentTouch.screenPosition, arRaycastHits, TrackableType.PlaneWithinPolygon))
+            {
+                foreach (ARRaycastHit hit in arRaycastHits)
                 {
-                    foreach (ARRaycastHit hit in arRaycastHits)
+                    Pose pose = hit.pose;
+
+                    if (arPlaneManager.GetPlane(hit.trackableId).alignment == PlaneAlignment.HorizontalUp)
                     {
-                        Pose pose = hit.pose;
+                        rover.transform.position = pose.position;
+                        rover.SetActive(true);
+                        isRoverActive = true;
 
-                        if (arPlaneManager.GetPlane(hit.trackableId).alignment == PlaneAlignment.HorizontalUp)
-                        {
-                            rover.transform.position = pose.position;
-                            rover.SetActive(true);
-                            isRoverActive = true;
-
-                            //Move to Play Mode and turn off planemanager
-                            StartGame();
-                            return;
-                        }
+                        //Move to Play Mode and turn off planemanager
+                        StartGame();
+                        return;
                     }
-                } 
+                }
             }
         }
     }
@@ -133,7 +134,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator WaitAndTurnOnLayers()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
 
         mainARCamera.cullingMask &= 0x00000000;
         mainARCamera.cullingMask |= ~(0x00000000);

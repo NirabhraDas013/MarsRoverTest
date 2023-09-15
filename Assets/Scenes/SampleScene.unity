@@ -1774,6 +1774,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1194748726128984604, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1194748726128984604, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920485822844021378, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3920485822844021378, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167957682428541630, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167957682428541630, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171153087750816893, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171153087750816893, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276966775658819890, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276966775658819890, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372077646500484169, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372077646500484169, guid: 9d9c93b39fce34c42b20b680650721dc,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 9125842891576858350, guid: 9d9c93b39fce34c42b20b680650721dc,
         type: 3}
       propertyPath: m_Name
