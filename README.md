@@ -30,5 +30,11 @@ For the Rover Arm, I used a IK asset I had bought a while ago called HybridIK. I
 Same with the Wheel Colliders. I have not done much with the wheel colliders as Unity's wheel collider system (at least according to majority of users) is too complex for a good arcade wheel while not complex enough for a realistic wheel. (Go figure. Well Done Unity, Well Done.)
 
 
-And Finally Here's a little almost but not quite 2 minute long video of the project. Although I has no idea why it is 200MB!!
+And Finally Here's a little almost but not quite 2 minute long video of the project. Video quality might be a *tiny bit* on the down side. Original video file was 211 MB and I had to compress it to an inch of its life
 
+
+https://github.com/NirabhraDas013/MarsRoverTest/assets/54432376/b8c95d60-5571-4b72-9023-c0352f926379
+
+
+
+For the original File. Please Visit [Here](https://drive.google.com/file/d/1_edrhyjYpAYyK2hxoF3toiLvUCo8IDg9/view?usp=drive_link).
