@@ -30,5 +30,5 @@ For the Rover Arm, I used a IK asset I had bought a while ago called HybridIK. I
 Same with the Wheel Colliders. I have not done much with the wheel colliders as Unity's wheel collider system (at least according to majority of users) is too complex for a good arcade wheel while not complex enough for a realistic wheel. (Go figure. Well Done Unity, Well Done.)
 
 
-And Finally Here's a little almost but not quite 2 minute long video of the project. Although I hav no idea why it is 200MB!!
+And Finally Here's a little almost but not quite 2 minute long video of the project. Although I has no idea why it is 200MB!!
 
