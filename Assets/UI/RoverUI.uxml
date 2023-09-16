@@ -20,7 +20,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="PromptPlayerContainer" style="flex-grow: 1; visibility: visible;">
-            <ui:Label tabindex="-1" text="Please Tap on the Generated plane to spawn Rover" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PromptText" style="font-size: 75px; -unity-text-align: middle-center;" />
+            <ui:Label tabindex="-1" text="Please Tap on the Generated plane to spawn Rover" parse-escape-sequences="true" display-tooltip-when-elided="true" name="PromptText" style="font-size: 75px; -unity-text-align: middle-center; color: rgb(8, 0, 255);" />
         </ui:VisualElement>
         <ui:VisualElement name="RoverMovementButtonsContainer" picking-mode="Ignore" style="flex-grow: 0; flex-basis: 35%; justify-content: center; flex-direction: column-reverse; flex-shrink: 1; align-items: center; padding-top: 1%; padding-right: 1%; padding-bottom: 1%; padding-left: 1%; background-color: rgba(0, 0, 0, 0); width: 50%; height: auto; align-self: flex-end; flex-wrap: wrap; border-top-left-radius: 100%; border-top-right-radius: 100%; border-bottom-right-radius: 100%; border-bottom-left-radius: 100%; visibility: visible; display: flex;">
             <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="DriveForwardButton" class="driveButton" style="background-image: url(&apos;project://database/Assets/Sprites/Arrow.png?fileID=573014494&amp;guid=1afbdc3b5798a1148b7612604ed89e0f&amp;type=3#Arrow_Up&apos;); left: 35%; bottom: 70%; align-self: center;" />
